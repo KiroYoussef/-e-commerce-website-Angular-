@@ -19,10 +19,11 @@ export class OrderTrackingComponent implements OnInit {
 
   satus=  this.data.satus;
   ngOnInit(): void {
+    console.log(this.satus);
+    console.log(this.data);
 
     console.log(this.satus==="Order confirmed");
     if(this.satus==="Order confirmed"){
-      console.log("hi");
       this.Orderconfirmed="step active";
       this.Pickedbycourier="step ";
       this.Ontheway="step ";

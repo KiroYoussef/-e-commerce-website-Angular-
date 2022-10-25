@@ -50,7 +50,7 @@ export class ProductService {
   }
   GetAllProductsByUserId(UserID: string): Observable<ISellerProduct[]> {
     return this.http
-      .get<ISellerProduct[]>(this._url + 'GetProductByUserId?UserId=' + UserID)
+      .get<ISellerProduct[]>(this._url + 'GetProductByUserId/' + UserID)
       .pipe(
         catchError((err) => {
           return throwError(() => err.message || 'Internal Server Error');

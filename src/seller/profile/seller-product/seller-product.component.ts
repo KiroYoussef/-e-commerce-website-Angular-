@@ -71,9 +71,9 @@ export class SellerProductComponent implements OnInit {
   };
 
   ngOnInit(): void {
-    // this.ActRoute.paramMap.subscribe((params: ParamMap) => {
-    //   this.userID = params.get('ID');
-    // });
+    this.ActRoute.paramMap.subscribe((params: ParamMap) => {
+      this.userID = params.get('ID');
+    });
     this.gettoken();
     this.ProductS.GetAllProductsByUserId(this.userID).subscribe(
       (data: ISellerProduct[]) => {

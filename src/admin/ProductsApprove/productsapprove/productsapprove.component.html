@@ -31,13 +31,13 @@
                   (click)="gotoProductDetails(prod.id)">Details</a>&nbsp;
                   <button
                     class="btn btn-success"
-                    (click)="ChangeProductApprove(prod.id, prod.firstAprove=true)">
+                    (click)="ChangeProductApprove(prod.id, 1)">
                     Approve
                   </button>&nbsp;
                 <button
                 class="btn btn-danger"
                 (click)="DeleteProduct(prod.id, $event)">
-                Delete X
+                Delete
               </button>
 
               </td>

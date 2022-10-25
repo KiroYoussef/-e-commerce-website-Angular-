@@ -86,7 +86,9 @@ export class AddProductComponent implements OnInit {
     this.productService.AddNewProduct(FormObj).subscribe((d) => console.log(d));
     // this.router.navigateByUrl();
     // location.reload();
-    history.back();
+    setTimeout(() => {
+          history.back();
+    }, 500);
   }
   FilteredSubCategories: ISubCategory[] = [];
   CategorySelected(event: any) {
